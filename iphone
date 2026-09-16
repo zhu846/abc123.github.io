@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone</title>
+    <style>
+        .preview-img{
+            width: 280px;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>iPhone</h1>
+    <hr>
+
+    <h3>iphone3G</h3>
+    <a href="iphone3G.html">
+        <img class="preview-img" src="iPhone 3G 1.png" alt="iphone3G">
+    </a>
+
+    <h3>iphone4</h3>
+    <!-- 后面继续在这里加更多图片链接 -->
+
+</body>
+</html>
+
