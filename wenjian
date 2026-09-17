@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome the photoblog</title>
+    <style>
+        img {
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        h1 {
+            font-size: 28px;
+            display: inline-block;
+            margin: 0;
+        }
+        button {
+            margin: 10px 0;
+            padding: 14px 20px;
+            width: 220px;
+            text-align: center;
+            background-color: #444444;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover{
+            background:#666;
+        }
+    </style>
+</head>
+<body>
+    <img src="ppp.png" alt="PHOTO logo">
+    <h1>welcome the photoblog</h1>
+    <hr>
+    <h2>You can pick any picture you like</h2>
+
+    <!-- 加上data-type标记，用来区分按钮 -->
+    <button class="wall-btn" data-type="iphone">iphone</button>
+    <br><button class="wall-btn" data-type="mac">mac or imac</button>
+    <br><button class="wall-btn" data-type="watch">apple watch</button>
+    <br><button class="wall-btn" data-type="ipad">ipad</button>
+
+    <script>
+        // 获取所有分类按钮
+        const allBtns = document.querySelectorAll(".wall-btn");
+
+        allBtns.forEach(btn => {
+            btn.addEventListener("click", function(){
+                // 获取当前点击按钮的标记
+                const type = this.dataset.type;
+                console.log("点击分类：", type);
+
+                // 判断点击的是哪个按钮
+                switch(type){
+                    case "iphone":
+                        <!-- 这里可以添加跳转到iphone.html的代码 -->
+                        window.location.href = "iphone.html";
+                        break;
+                    case "mac":
+                        alert("你选择了 Mac / iMac 壁纸");
+                        break;
+                    case "watch":
+                        alert("你选择了 Apple Watch 壁纸");
+                        break;
+                    case "ipad":
+                        alert("你选择了 iPad 壁纸");
+                        break;
+                }
+            })
+        })
+    </script>
+</body>
+</html>
